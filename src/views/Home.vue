@@ -8,6 +8,7 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { Row, Col, Icon, Cell, CellGroup } from 'vant';
 
 @Options({
   components: {
