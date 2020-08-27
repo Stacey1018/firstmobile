@@ -4,6 +4,15 @@ module.exports = {
   // parallel: false,
   // outputDir: '../docs',
   // publicPath: process.env.NODE_ENV === 'production' ? '/vant-demo/' : '/',
+  devServer:{
+    // port:
+    proxy:{
+      '^/api':{
+        target:process.env.PROXY_TARGET,
+        pathRewrite: { '^/api': '' },
+      }
+    }
+  },
   chainWebpack: config => {
     config.module
       .rule('ts')
