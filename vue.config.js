@@ -9,7 +9,6 @@ module.exports = {
     proxy:{
       '^/api':{
         target:process.env.PROXY_TARGET,
-        pathRewrite: { '^/api': '' },
       }
     }
   },
